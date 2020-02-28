@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>guava-retrying</module>
+        <module>dozer-demo</module>
     </modules>
 
     <dependencies>
@@ -18,21 +19,21 @@
             <artifactId>lombok</artifactId>
             <version>1.18.12</version>
         </dependency>
-        <!--        &lt;!&ndash; log4j2 begin &ndash;&gt;-->
-        <!--        &lt;!&ndash; log4j2核心包 &ndash;&gt;-->
-        <!--        <dependency>-->
-        <!--            <groupId>org.apache.logging.log4j</groupId>-->
-        <!--            <artifactId>log4j-core</artifactId>-->
-        <!--            <version>2.13.0</version>-->
-        <!--        </dependency>-->
+        <!-- log4j2 begin -->
+        <!-- log4j2核心包 -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.13.0</version>
+        </dependency>
 
-        <!--        &lt;!&ndash; 用于与slf4j保持桥接（里面自动依赖了slf4j-api）&ndash;&gt;-->
-        <!--        <dependency>-->
-        <!--            <groupId>org.apache.logging.log4j</groupId>-->
-        <!--            <artifactId>log4j-slf4j-impl</artifactId>-->
-        <!--            <version>2.13.0</version>-->
-        <!--        </dependency>-->
-        <!--        &lt;!&ndash; log4j2 end &ndash;&gt;-->
+        <!-- 用于与slf4j保持桥接（里面自动依赖了slf4j-api）-->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>2.13.0</version>
+        </dependency>
+        <!-- log4j2 end -->
     </dependencies>
 
     <build>

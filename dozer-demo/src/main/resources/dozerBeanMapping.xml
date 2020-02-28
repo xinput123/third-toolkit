@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozermapper.github.io/schema/bean-mapping"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://dozermapper.github.io/schema/bean-mapping http://dozermapper.github.io/schema/bean-mapping.xsd">
+
+    <!--全局配置，配置日期的映射格式-->
+    <configuration>
+        <stop-on-errors>true</stop-on-errors>
+        <date-format>MM/dd/yyyy HH:mm</date-format>
+    </configuration>
+
+    <!--
+    每个mapping元素都有类映射声明和字段的映射关系. wildcard 属性默认值为 true ,
+    这意味着Dozer将会尝试映射两个类的每个字段，当该属性设置为false时，Dozer将仅
+    映射显示定义的字段。也可以在field下的<a>或者<b>节点下添加配置信息，如<a date-fomat="MM/dd/yyyy HH:mm" />,
+    此时字段的配置信息优先级别高于全局配置
+    -->
+    <mapping wildcard="true">
+        <class-a>com.dozer.pojo.Source</class-a>
+        <class-b>com.dozer.pojo.Target02</class-b>
+        <!-- Source.name 和 Target02.userName 字段对应-->
+        <field>
+            <a>name</a>
+            <b>userName</b>
+        </field>
+    </mapping>
+
+
+</mappings>
